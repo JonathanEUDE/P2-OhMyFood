@@ -1,0 +1,14 @@
+.btn
+{
+    color:white;
+    background: $color-second;
+    background: linear-gradient(178deg, $color-second 19%, $color-principal 99%); 
+    height:50px;
+    border-radius: 50px;
+    padding:0 25px 0 25px;
+
+    font-family: $font-text-regular;
+
+    display:grid;
+    place-items: center;
+}

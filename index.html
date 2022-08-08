@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/sass/styles.css">
 </head>
+
 <body>
     <header>
-
+        <div id="logo">
+            <img src="./assets/images/logo/ohmyfood.png" alt="logo ohmyfood" />
+        </div>
+        <div id="localisation">
+            <i class="fa-solid fa-location-dot"></i> Paris, Belleville
+        </div>
     </header>
     <main>
+        <section id="presentation-concept-container">
+            <div id="presentation-concept-content">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <div class="btn">Explorer nos restaurants</div>
+            </div>
+        </section>
+        <section id="fonctionnement-container">
+            <div id="fonctionnement-content">
+                <h2>Fonctionnement</h2>
+                <div class="steps">
+                    <div class="step"><i class="fa-solid fa-tablet-screen-button"></i><span>Choisissez un
+                            restaurant</span></div>
+                    <div class="step"><i class="fa-solid fa-list-ul"></i><span>Composez votre menu</span></div>
+                    <div class="step"><i class="fa-solid fa-store"></i><span>Dégustez au restaurant</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="restaurants-container">
+            <div id="restaurants-content">
+                <h2>Restaurants</h2>
+                <div class="restaurant-tiles">
+                    <div class="restaurant-tile">
+                        <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="restaurant la palette du goût" />
+                        <div class="restaurant-tile-infos">
+                            <div class="restaurant-tile-infos-text">
+                                <h3>La palette du goût</h3>
+                                <span>Ménilmontant</span>
+                            </div>
+                            <div class="restaurant-tile-like">
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
-        
+
     </footer>
 </body>
+
 </html>
