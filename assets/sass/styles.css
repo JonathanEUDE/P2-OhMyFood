@@ -136,6 +136,52 @@ h3 {
   font-family: "Roboto Regular";
 }
 
+#localisation {
+  overflow: hidden;
+}
+#localisation i {
+  transform: translateY(0);
+}
+#localisation:hover i {
+  -webkit-animation: move-upanddown 1500ms 3;
+          animation: move-upanddown 1500ms 3;
+}
+
+@-webkit-keyframes move-upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-upanddown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 #presentation-concept-container {
   background-color: #F6F6F6;
   height: 290px;
