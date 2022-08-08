@@ -136,6 +136,37 @@ h3 {
   font-family: "Roboto Regular";
 }
 
+footer {
+  background-color: #353535;
+  color: white;
+  height: 200px;
+}
+footer #footer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 20px;
+}
+footer #footer-container h4 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  font-weight: normal;
+  height: 30%;
+  display: flex;
+  align-items: center;
+}
+footer #footer-container #footer-links {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer #footer-container #footer-links div i {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
 #localisation {
   overflow: hidden;
 }
@@ -284,12 +315,13 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   background-color: #F6F6F6;
   padding-bottom: 60px;
 }
 #restaurants-container h2 {
-  padding: 60px 0 20px 20px;
+  padding: 60px 0 0 20px;
 }
 #restaurants-container #restaurants-content {
   width: 100%;
@@ -299,6 +331,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: 20px;
 }
 #restaurants-container #restaurants-content .restaurant-tiles .restaurant-tile {
   width: 90%;
