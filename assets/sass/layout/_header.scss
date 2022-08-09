@@ -33,3 +33,12 @@ header
         }
     }
 }
+
+.header-restaurant{
+    display:flex;
+    flex-direction: row;
+    #logo{
+        width:90%;
+        box-shadow: none;
+    }
+}

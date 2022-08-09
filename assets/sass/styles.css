@@ -120,6 +120,15 @@ header #localisation i {
   margin-right: 20px;
 }
 
+.header-restaurant {
+  display: flex;
+  flex-direction: row;
+}
+.header-restaurant #logo {
+  width: 90%;
+  box-shadow: none;
+}
+
 h1 {
   font-size: 24px;
   font-family: "Roboto Bold";
@@ -331,14 +340,17 @@ footer #footer-container #footer-links div i {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
 }
 #restaurants-container #restaurants-content .restaurant-tiles .restaurant-tile {
   width: 90%;
   border-radius: 20px;
-  box-shadow: 2px 2px 1px lightgray;
+  box-shadow: 0px 0px 10px lightgray;
   position: relative;
   z-index: 1;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: 20px;
 }
 #restaurants-container #restaurants-content .restaurant-tiles .restaurant-tile::after {
   position: absolute;
@@ -378,4 +390,75 @@ footer #footer-container #footer-links div i {
   display: grid;
   place-items: center;
   width: 20%;
+}
+#restaurants-container #restaurants-content .restaurant-tiles .restaurant-tile:hover {
+  box-shadow: 0px 0px 10px #9356DC;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #F6F6F6;
+}
+.menu-container .menu-image {
+  height: 220px;
+}
+.menu-container .menu-image img {
+  height: 260px;
+}
+.menu-container .menu {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: white;
+  padding: 40px 15px 60px 15px;
+}
+.menu-container .menu .menu-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menu-container .menu .menu-title h3 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  font-size: 28px;
+  width: 90%;
+}
+.menu-container .menu .menu-block h4 {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.menu-container .menu .menu-block h4:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu-container .menu .menu-block .menu-tile {
+  margin-top: 14px;
+}
+.menu-container .menu .menu-block .menu-tile h5 {
+  font-family: "Roboto Bold";
+  font-size: 16px;
+  font-weight: 400;
+}
+.menu-container .menu .menu-block .menu-tile .menu-infos {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+.menu-container .menu .menu-block .menu-tile .menu-infos .menu-detail {
+  width: 90%;
+}
+.menu-container .menu .menu-block .menu-tile .menu-infos .menu-price {
+  width: 10%;
+  font-family: "Roboto Bold";
+  font-weight: 400;
 }/*# sourceMappingURL=styles.css.map */
