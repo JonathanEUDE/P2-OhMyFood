@@ -154,7 +154,7 @@ footer #footer-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-left: 20px;
+  padding: 20px;
 }
 footer #footer-container h4 {
   font-family: "Shrikhand";
@@ -398,21 +398,29 @@ footer #footer-container #footer-links div i {
 .menu-container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   position: relative;
   background-color: #F6F6F6;
 }
 .menu-container .menu-image {
   height: 220px;
+  max-height: 220px;
+  z-index: 0;
 }
 .menu-container .menu-image img {
   height: 260px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .menu-container .menu {
+  z-index: 1;
+  opacity: 1;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  background-color: white;
+  background-color: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   padding: 40px 15px 60px 15px;
 }
 .menu-container .menu .menu-title {
@@ -424,13 +432,14 @@ footer #footer-container #footer-links div i {
   font-family: "Shrikhand";
   font-weight: normal;
   font-size: 28px;
+  padding-left: 10px;
   width: 90%;
 }
 .menu-container .menu .menu-block h4 {
   text-transform: uppercase;
   position: relative;
   font-size: 14px;
-  margin-top: 40px;
+  margin: 40px 0 10px 10px;
 }
 .menu-container .menu .menu-block h4:before {
   content: "";
@@ -442,7 +451,14 @@ footer #footer-container #footer-links div i {
   border-bottom: 3px solid #99E2D0;
 }
 .menu-container .menu .menu-block .menu-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: 14px;
+  background-color: white;
+  height: 70px;
+  border-radius: 20px;
+  padding: 15px;
 }
 .menu-container .menu .menu-block .menu-tile h5 {
   font-family: "Roboto Bold";
@@ -461,4 +477,8 @@ footer #footer-container #footer-links div i {
   width: 10%;
   font-family: "Roboto Bold";
   font-weight: 400;
+}
+.menu-container .btn {
+  width: 50%;
+  margin: 0 auto 85px auto;
 }/*# sourceMappingURL=styles.css.map */
