@@ -11,4 +11,11 @@
 
     display:grid;
     place-items: center;
+
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: linear-gradient(178deg, lighten($color-second,5%) 19%, lighten($color-principal,5%) 99%); 
+    box-shadow: 0 0 10px $color-second;
 }

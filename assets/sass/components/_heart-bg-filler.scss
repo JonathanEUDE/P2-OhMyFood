@@ -1,0 +1,62 @@
+
+.heart{
+    position:relative;
+
+    display:flex;
+
+
+    &-bg-base {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        height: 32px;
+        width: 32px;
+    
+        z-index: 2;
+    
+        opacity: 1;
+    
+        &:hover+.heart-bg-filler {
+            animation: fill 1s linear forwards;
+        }
+    }
+
+    &-bg-filler {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        height: 32px;
+        width: 32px;
+    
+        z-index: 1;
+    
+        color: $color-principal;
+        opacity: 0;
+        transform-origin: center center;
+    }
+}
+
+@keyframes fill {
+    0% {
+        opacity: 1;
+        transform: scale(0.2);
+    }
+    20%{
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.2);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity:1
+    }
+}

@@ -54,7 +54,9 @@ Exemple :
 @import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
+@import "./components/loading-spinner";
 @import "./components/buttons";
+@import "./components/heart-bg-filler";
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/footer";
