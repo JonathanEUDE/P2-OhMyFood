@@ -188,33 +188,36 @@ body #loading-spinner-container div i {
 
 .heart {
   position: relative;
-  display: flex;
-}
-.heart-bg-base {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: grid;
+  place-items: center;
   height: 32px;
   width: 32px;
-  z-index: 2;
   opacity: 1;
 }
-.heart-bg-base:hover + .heart-bg-filler {
-  -webkit-animation: fill 1s linear forwards;
-          animation: fill 1s linear forwards;
-}
-.heart-bg-filler {
+.heart:hover::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: xx-large;
+  line-height: 1;
   position: absolute;
   top: 0;
   left: 0;
-  height: 32px;
-  width: 32px;
-  z-index: 1;
   color: #9356DC;
   opacity: 0;
   transform-origin: center center;
+  -webkit-animation: fill 1s linear forwards;
+          animation: fill 1s linear forwards;
 }
 
+/* 
+    1. Add a unique CSS class name to the icon element you want to use.
+    2. Set the font-family to “Font Awesome 6 Free” (For regular,solid icons) 
+        or “Font Awesome 5 Pro” (If you buy a pro license) or “Font Awesome 5 Brands” (For brand icons)
+    3. Set the font-weight css property as 900 (For Solid), 400 (Regular or Brands), 300 (Light for pro icons).
+    4. Set the content css property to the unicode value font awesome icon.
+    5. And if required,add a common CSS class name for all icon elements, for example “font-awesome-icons” (This is to add your own CSS to the icons).
+*/
 @-webkit-keyframes fill {
   0% {
     opacity: 1;
@@ -237,7 +240,6 @@ body #loading-spinner-container div i {
     opacity: 1;
   }
 }
-
 @keyframes fill {
   0% {
     opacity: 1;
@@ -554,18 +556,17 @@ footer #footer-container #footer-links div i {
   border-top-right-radius: 20px;
 }
 #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
 }
 #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-infos-text {
-  width: 80%;
+  width: 90%;
 }
 #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-like {
-  display: grid;
-  place-items: center;
+  width: 10%;
 }
 #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover {
   box-shadow: 0px 0px 10px #9356DC;
