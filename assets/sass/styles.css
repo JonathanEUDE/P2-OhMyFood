@@ -100,8 +100,8 @@ body #loading-spinner-container {
 }
 body #loading-spinner-container div {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -168,6 +168,28 @@ body #loading-spinner-container div i {
     transform: rotate(360deg);
   }
 }
+.new-tag {
+  position: relative;
+  z-index: 1;
+}
+.new-tag::after {
+  position: absolute;
+  content: "Nouveau";
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 80px;
+  background-color: #99E2D0;
+  color: #32b091;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-family: "Roboto Bold";
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px lightgray;
+  z-index: 2;
+}
+
 .btn {
   color: white;
   background: #FF79DA;
@@ -179,6 +201,7 @@ body #loading-spinner-container div i {
   display: grid;
   place-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -223,16 +246,10 @@ body #loading-spinner-container div i {
     opacity: 1;
     transform: scale(0.2);
   }
-  20% {
+  33% {
     transform: scale(1);
   }
-  40% {
-    transform: scale(0.2);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
+  66% {
     transform: scale(0.2);
   }
   100% {
@@ -245,16 +262,10 @@ body #loading-spinner-container div i {
     opacity: 1;
     transform: scale(0.2);
   }
-  20% {
+  33% {
     transform: scale(1);
   }
-  40% {
-    transform: scale(0.2);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
+  66% {
     transform: scale(0.2);
   }
   100% {
@@ -320,7 +331,7 @@ h3 {
 
 h4 {
   font-size: 14px;
-  font-family: "Shrikhand";
+  font-family: 18px;
 }
 
 footer {
@@ -328,11 +339,22 @@ footer {
   color: white;
   height: 200px;
 }
+@media all and (min-width: 992px) {
+  footer {
+    height: 60px;
+  }
+}
 footer #footer-container {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 20px;
+}
+@media all and (min-width: 992px) {
+  footer #footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 footer #footer-container h4 {
   font-family: "Shrikhand";
@@ -342,11 +364,27 @@ footer #footer-container h4 {
   display: flex;
   align-items: center;
 }
+@media all and (min-width: 992px) {
+  footer #footer-container h4 {
+    height: auto;
+  }
+}
 footer #footer-container #footer-links {
   height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+@media all and (min-width: 992px) {
+  footer #footer-container #footer-links {
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+  }
+}
+footer #footer-container #footer-links a {
+  text-decoration: none;
+  color: white;
 }
 footer #footer-container #footer-links div i {
   height: 15px;
@@ -354,104 +392,98 @@ footer #footer-container #footer-links div i {
   margin-right: 10px;
 }
 
-#localisation {
-  overflow: hidden;
-}
-#localisation i {
-  transform: translateY(0);
-}
-#localisation:hover i {
-  -webkit-animation: move-upanddown 1500ms 3;
-          animation: move-upanddown 1500ms 3;
-}
-
-@-webkit-keyframes move-upanddown {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
+@media all and (min-width: 992px) {
+  main div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
   }
 }
-
-@keyframes move-upanddown {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-#presentation-concept {
+main #presentation-concept {
   background-color: #F6F6F6;
   height: 290px;
   display: grid;
   align-items: center;
 }
-#presentation-concept #presentation-concept-content {
+@media all and (min-width: 992px) {
+  main #presentation-concept {
+    height: auto;
+    background-color: white;
+  }
+}
+main #presentation-concept #presentation-concept-content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 90%;
 }
-#presentation-concept #presentation-concept-content > * {
+main #presentation-concept #presentation-concept-content > * {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-#presentation-concept #presentation-concept-content h1 {
+main #presentation-concept #presentation-concept-content h1 {
   width: 70%;
 }
-#presentation-concept #presentation-concept-content p {
+main #presentation-concept #presentation-concept-content p {
   width: 90%;
   font-size: 18px;
 }
-
-#fonctionnement {
+main #fonctionnement {
   display: flex;
   flex-direction: column;
   height: 440px;
 }
-#fonctionnement #fonctionnement-content {
+@media all and (min-width: 992px) {
+  main #fonctionnement {
+    height: auto;
+    width: 50%;
+    align-items: center;
+  }
+}
+main #fonctionnement #fonctionnement-content {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-#fonctionnement #fonctionnement-content h2 {
+@media all and (min-width: 992px) {
+  main #fonctionnement #fonctionnement-content {
+    width: 100%;
+    align-items: center;
+  }
+}
+main #fonctionnement #fonctionnement-content h2 {
   padding-left: 20px;
   height: 100px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
-#fonctionnement #fonctionnement-content .steps {
+@media all and (min-width: 992px) {
+  main #fonctionnement #fonctionnement-content h2 {
+    height: 50px;
+  }
+}
+main #fonctionnement #fonctionnement-content .steps {
   display: grid;
   place-items: center;
   height: 265px;
   counter-reset: number;
 }
-#fonctionnement #fonctionnement-content .steps .step {
+@media all and (min-width: 992px) {
+  main #fonctionnement #fonctionnement-content .steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
+main #fonctionnement #fonctionnement-content .steps .step {
   width: 90%;
   height: 70px;
   display: flex;
@@ -467,7 +499,7 @@ footer #footer-container #footer-links div i {
   background-color: #F6F6F6;
   counter-increment: number;
 }
-#fonctionnement #fonctionnement-content .steps .step::before {
+main #fonctionnement #fonctionnement-content .steps .step::before {
   content: counter(number) " ";
   position: absolute;
   top: 22.5px;
@@ -482,23 +514,22 @@ footer #footer-container #footer-links div i {
   color: white;
   border-radius: 20px;
 }
-#fonctionnement #fonctionnement-content .steps .step i {
+main #fonctionnement #fonctionnement-content .steps .step i {
   color: grey;
   padding-left: 5px;
 }
-#fonctionnement #fonctionnement-content .steps .step span {
+main #fonctionnement #fonctionnement-content .steps .step span {
   width: 100%;
   display: grid;
   place-items: center;
 }
-#fonctionnement #fonctionnement-content .steps .step:hover {
+main #fonctionnement #fonctionnement-content .steps .step:hover {
   background-color: #F5EDFF;
 }
-#fonctionnement #fonctionnement-content .steps .step:hover i {
+main #fonctionnement #fonctionnement-content .steps .step:hover i {
   color: #9356DC;
 }
-
-#restaurants {
+main #restaurants {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,47 +538,50 @@ footer #footer-container #footer-links div i {
   background-color: #F6F6F6;
   padding-bottom: 60px;
 }
-#restaurants h2 {
+main #restaurants h2 {
   padding: 60px 0 0 20px;
 }
-#restaurants #restaurants-content {
+@media all and (min-width: 992px) {
+  main #restaurants h2 {
+    padding: 20px 0 0 20px;
+  }
+}
+main #restaurants #restaurants-content {
   width: 100%;
 }
-#restaurants #restaurants-content .restaurant-tiles {
+main #restaurants #restaurants-content .restaurant-tiles {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile {
+@media all and (min-width: 992px) {
+  main #restaurants #restaurants-content .restaurant-tiles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile {
   width: 90%;
   border-radius: 20px;
   box-shadow: 0px 0px 10px lightgray;
-  position: relative;
-  z-index: 1;
   text-decoration: none;
   color: black;
   display: block;
   margin-top: 20px;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile::after {
-  position: absolute;
-  content: "Nouveau";
-  top: 20px;
-  right: 20px;
-  height: 30px;
-  width: 80px;
-  background-color: #99E2D0;
-  color: #32b091;
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-  font-family: "Roboto Bold";
-  border-radius: 2px;
-  box-shadow: 0px 0px 2px lightgray;
-  z-index: 2;
+@media all and (min-width: 992px) {
+  main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile {
+    width: 45%;
+  }
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile img {
+@media all and (min-width: 1280px) {
+  main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile {
+    width: 22%;
+  }
+}
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile img {
   height: 180px;
   width: 100%;
   -o-object-fit: cover;
@@ -555,20 +589,20 @@ footer #footer-container #footer-links div i {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos {
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-infos-text {
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-infos-text {
   width: 90%;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-like {
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile .restaurant-tile-infos .restaurant-tile-like {
   width: 10%;
 }
-#restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover {
+main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover {
   box-shadow: 0px 0px 10px #9356DC;
 }
 
@@ -587,6 +621,7 @@ footer #footer-container #footer-links div i {
 .menu-container .menu-image img {
   height: 260px;
   max-width: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -603,7 +638,8 @@ footer #footer-container #footer-links div i {
 .menu-container .menu .menu-title {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-around;
+  padding-right: 20px;
 }
 .menu-container .menu .menu-title h3 {
   font-family: "Shrikhand";
@@ -615,7 +651,6 @@ footer #footer-container #footer-links div i {
 .menu-container .menu .menu-block h4 {
   text-transform: uppercase;
   position: relative;
-  font-size: 14px;
   margin: 40px 0 10px 10px;
 }
 .menu-container .menu .menu-block h4:before {
@@ -629,33 +664,174 @@ footer #footer-container #footer-links div i {
 }
 .menu-container .menu .menu-block .menu-tile {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   margin-top: 14px;
   background-color: white;
   height: 70px;
   border-radius: 20px;
-  padding: 15px;
+  -webkit-animation: fade-text 500ms ease-in forwards;
+          animation: fade-text 500ms ease-in forwards;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
 }
-.menu-container .menu .menu-block .menu-tile h5 {
+.menu-container .menu .menu-block .menu-tile.delay-1 {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-2 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-3 {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-4 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-5 {
+  -webkit-animation-delay: 1250ms;
+          animation-delay: 1250ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-6 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-7 {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-8 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-9 {
+  -webkit-animation-delay: 2250ms;
+          animation-delay: 2250ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-10 {
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-11 {
+  -webkit-animation-delay: 2750ms;
+          animation-delay: 2750ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-12 {
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-13 {
+  -webkit-animation-delay: 3250ms;
+          animation-delay: 3250ms;
+}
+.menu-container .menu .menu-block .menu-tile.delay-14 {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
+}
+.menu-container .menu .menu-block .menu-tile:hover > .menu-text {
+  padding-right: 70px;
+  transition: padding-right 400ms;
+}
+.menu-container .menu .menu-block .menu-tile:hover > .menu-check {
+  right: 0;
+  transition: right 400ms;
+}
+.menu-container .menu .menu-block .menu-tile:hover > .menu-check i {
+  -webkit-animation: rotate-menu-check 400ms ease-in forwards;
+          animation: rotate-menu-check 400ms ease-in forwards;
+}
+.menu-container .menu .menu-block .menu-tile .menu-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
+}
+.menu-container .menu .menu-block .menu-tile .menu-text h5 {
   font-family: "Roboto Bold";
   font-size: 16px;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.menu-container .menu .menu-block .menu-tile .menu-infos {
+.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos {
   font-size: 14px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-.menu-container .menu .menu-block .menu-tile .menu-infos .menu-detail {
-  width: 90%;
+.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos .menu-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.menu-container .menu .menu-block .menu-tile .menu-infos .menu-price {
-  width: 10%;
+.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos .menu-price {
   font-family: "Roboto Bold";
   font-weight: 400;
+}
+.menu-container .menu .menu-block .menu-tile .menu-check {
+  background-color: #99E2D0;
+  height: 100%;
+  width: 60px;
+  min-width: 0;
+  max-width: 60px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  display: grid;
+  place-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  transition: right 400ms;
 }
 .menu-container .btn {
   width: 50%;
   margin: 0 auto 85px auto;
+}
+
+@-webkit-keyframes fade-text {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-text {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate-menu-check {
+  0% {
+    transform: rotate(0.5turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate-menu-check {
+  0% {
+    transform: rotate(0.5turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,259 +1,254 @@
-#localisation {
-    overflow: hidden;
-
-    i {
-        transform: translateY(0);
-    }
-
-    &:hover {
-        i {
-            animation: move-upanddown 1500ms 3;
-        }
-    }
-}
-
-@keyframes move-upanddown {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(-10px);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-
-    75% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-
-#presentation-concept {
-    background-color: $color-fourth;
-    height: 290px;
-    display: grid;
-    align-items: center;
-
-    #presentation-concept-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 90%;
-
-        >* {
-            display: flex;
+main{
+    div:nth-child(2){
+        @media all and (min-width:992px) {
+            display:flex;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        h1 {
-            width: 70%;
-
-        }
-
-        p {
-            width: 90%;
-            font-size: $font-size-subtitle;
+            justify-content: space-between;
+            padding-bottom:20px;
         }
     }
-}
 
-#fonctionnement {
-    display: flex;
-    flex-direction: column;
+    #presentation-concept {
+        background-color: $color-fourth;
+        height: 290px;
+        display: grid;
+        align-items: center;
 
-    height: 440px;
-
-    #fonctionnement-content {
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        h2 {
-            padding-left: 20px;
-            height: 100px;
-
-            display: flex;
-            align-items: center;
+        @media all and (min-width:992px) {
+            height: auto;
+            background-color: white;
         }
-
-        .steps {
-            display: grid;
-            place-items: center;
-            height: 265px;
-
-            counter-reset: number;
-
-            .step {
-
-                width: 90%;
-                height: 70px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-
-                padding: 30px;
-                border-radius: 20px;
-                box-shadow: 2px 2px 1px lightgray;
-
-                position: relative;
-
-                font-size: $font-size-subtitle;
-                font-family: $font-text-regular;
-                background-color: $color-fourth;
-
-                counter-increment: number;
-
-                &::before {
-                    content: counter(number)" ";
-                    position: absolute;
-                    top: 22.5px;
-                    left: -10px;
-
-                    height: 25px;
-                    width: 25px;
-
-                    display: grid;
-                    place-items: center;
-
-                    background-color: $color-principal;
-
-                    font-size: $font-size-principal;
-                    font-family: $font-text-regular;
-
-                    color: white;
-                    border-radius: 20px;
-                }
-
-                i {
-                    color: grey;
-                    padding-left: 5px;
-                }
-
-                span {
-                    width: 100%;
-                    display: grid;
-                    place-items: center;
-                }
-
-                &:hover {
-                    background-color: $color-fifth;
-
-                    i {
-                        color: $color-principal;
-                    }
-                }
-            }
-        }
-    }
-}
-
-#restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-
-    background-color: $color-fourth;
-    padding-bottom: 60px;
-
-    h2 {
-        padding: 60px 0 0 20px;
-    }
-
-    #restaurants-content {
-        width: 100%;
-
-        .restaurant-tiles {
+    
+        #presentation-concept-content {
             display: flex;
             flex-direction: column;
+            justify-content: space-evenly;
             align-items: center;
-
-            width: 100%;
-
-            .restaurant-tile {
+            height: 90%;
+    
+            >* {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+    
+            h1 {
+                width: 70%;
+    
+            }
+    
+            p {
                 width: 90%;
+                font-size: $font-size-subtitle;
+            }
+        }
+    }
+    
+    #fonctionnement {
+        display: flex;
+        flex-direction: column;
+    
+        height: 440px;
 
-                border-radius: $border-radius-default;
-                box-shadow: 0px 0px 10px lightgray;
+        @media all and (min-width:992px) {
+            height: auto;
+            width:50%;
+            align-items: center;
+        }
+    
+        #fonctionnement-content {
+            height: 100%;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
 
-                position: relative;
-                z-index: 1;
+            @media all and (min-width:992px) {
+                width:100%;
+                align-items: center;
+            }
+    
+            h2 {
+                padding-left: 20px;
+                height: 100px;
+    
+                display: grid;
+                place-items: center;
 
-                text-decoration: none;
-                color: black;
-                display: block;
-
-                margin-top: 20px;
-
-                &::after {
-                    position: absolute;
-                    content: 'Nouveau';
-                    top: 20px;
-                    right: 20px;
-                    height: 30px;
-                    width: 80px;
-                    background-color: $color-third;
-                    color: darken($color-third, 30%);
-
-                    display: grid;
-                    place-items: center;
-
-                    font-size: $font-size-new;
-                    font-family: $font-text-bold;
-
-                    border-radius: 2px;
-                    box-shadow: 0px 0px 2px lightgray;
-
-                    z-index: 2;
+                @media all and (min-width:992px) {
+                    height: 50px;
                 }
 
-                img {
-                    height: 180px;
-                    width: 100%;
-                    object-fit: cover;
+            }
+    
+            .steps {
+                display: grid;
+                place-items: center;
+                height: 265px;
+    
+                counter-reset: number;
 
-                    border-top-left-radius: $border-radius-default;
-                    border-top-right-radius: $border-radius-default;
+                @media all and (min-width:992px) {
+                   display:flex;
+                   flex-direction: column;
+                   justify-content: space-around;
+                   align-items: center;
+                   width:100%;
                 }
-
-                .restaurant-tile-infos {
-                    width: 100%;
+    
+                .step {
+    
+                    width: 90%;
+                    height: 70px;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
-
-                    padding:20px;
-
-                    .restaurant-tile-infos-text {
-                        width: 90%;
+                    justify-content: flex-start;
+                    align-items: center;
+    
+                    padding: 30px;
+                    border-radius: 20px;
+                    box-shadow: 2px 2px 1px lightgray;
+    
+                    position: relative;
+    
+                    font-size: $font-size-subtitle;
+                    font-family: $font-text-regular;
+                    background-color: $color-fourth;
+    
+                    counter-increment: number;
+    
+                    &::before {
+                        content: counter(number)" ";
+                        position: absolute;
+                        top: 22.5px;
+                        left: -10px;
+    
+                        height: 25px;
+                        width: 25px;
+    
+                        display: grid;
+                        place-items: center;
+    
+                        background-color: $color-principal;
+    
+                        font-size: $font-size-principal;
+                        font-family: $font-text-regular;
+    
+                        color: white;
+                        border-radius: 20px;
                     }
-
-                    .restaurant-tile-like {
-                        width:10%;
+    
+                    i {
+                        color: grey;
+                        padding-left: 5px;
                     }
-                }
-
-                &:hover {
-                    box-shadow: 0px 0px 10px $color-principal;
+    
+                    span {
+                        width: 100%;
+                        display: grid;
+                        place-items: center;
+                    }
+    
+                    &:hover {
+                        background-color: $color-fifth;
+    
+                        i {
+                            color: $color-principal;
+                        }
+                    }
                 }
             }
         }
     }
+    
+    #restaurants {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    
+        background-color: $color-fourth;
+        padding-bottom: 60px;
+    
+        h2 {
+            padding: 60px 0 0 20px;
+
+            @media all and (min-width:992px) {
+                padding: 20px 0 0 20px;
+            }
+        }
+    
+        #restaurants-content {
+            width: 100%;
+    
+            .restaurant-tiles {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                width: 100%;
+
+                @media all and (min-width:992px) {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+    
+                .restaurant-tile {
+                    width: 90%;
+    
+                    border-radius: $border-radius-default;
+                    box-shadow: 0px 0px 10px lightgray;
+    
+                    text-decoration: none;
+                    color: black;
+                    display: block;
+    
+                    margin-top: 20px;
+
+                    @media all and (min-width:992px) {
+                        width:45%;
+                    }
+                    @media all and (min-width:1280px) {
+                        width:22%;
+                    }
+    
+                    img {
+                        height: 180px;
+                        width: 100%;
+                        object-fit: cover;
+    
+                        border-top-left-radius: $border-radius-default;
+                        border-top-right-radius: $border-radius-default;
+                    }
+    
+                    .restaurant-tile-infos {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+    
+                        padding:20px;
+    
+                        .restaurant-tile-infos-text {
+                            width: 90%;
+                        }
+    
+                        .restaurant-tile-like {
+                            width:10%;
+                        }
+                    }
+    
+                    &:hover {
+                        box-shadow: 0px 0px 10px $color-principal;
+                    }
+                }
+            }
+        }
+    }    
 }
+
 

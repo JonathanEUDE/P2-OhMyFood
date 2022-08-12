@@ -1,7 +1,7 @@
 .menu-container {
     display: flex;
     flex-direction: column;
-    align-items:stretch;
+    align-items: stretch;
 
     position: relative;
 
@@ -16,6 +16,7 @@
         img {
             height: 260px;
             max-width: 100%;
+            width:100%;
             object-fit: cover;
         }
     }
@@ -25,7 +26,7 @@
         opacity: 1;
         display: flex;
         flex-direction: column;
-        
+
         background-color: $color-fourth;
 
         border-top-left-radius: 40px;
@@ -36,25 +37,26 @@
         .menu-title {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            justify-content: space-around;
+            padding-right:20px;
 
             h3 {
                 font-family: $font-logo-title;
                 font-weight: normal;
                 font-size: 28px;
 
-                padding-left:10px;
+
+                padding-left: 10px;
 
                 width: 90%;
             }
         }
 
         .menu-block {
+
             h4 {
                 text-transform: uppercase;
                 position: relative;
-
-                font-size: $font-size-new;
 
                 margin: 40px 0 10px 10px;
 
@@ -72,7 +74,7 @@
 
             .menu-tile {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: space-between;
 
                 margin-top: 14px;
@@ -81,35 +83,174 @@
                 height: 70px;
 
                 border-radius: 20px;
-                padding: 15px;
 
-                h5 {
-                    font-family: $font-text-bold;
-                    font-size: $font-size-menu-title;
-                    font-weight: 400;
+                animation: fade-text 500ms ease-in forwards;
+                animation-delay: 250ms;
+
+                position:relative;
+
+                overflow: hidden;
+
+                opacity: 0;
+
+                &.delay-1 {
+                    animation-delay: 250ms;
                 }
 
-                .menu-infos {
-                    font-size: $font-size-new;
+                &.delay-2 {
+                    animation-delay: 500ms;
+                }
 
+                &.delay-3 {
+                    animation-delay: 750ms;
+                }
+
+                &.delay-4 {
+                    animation-delay: 1000ms;
+                }
+
+                &.delay-5 {
+                    animation-delay: 1250ms;
+                }
+
+                &.delay-6 {
+                    animation-delay: 1500ms;
+                }
+
+                &.delay-7 {
+                    animation-delay: 1750ms;
+                }
+
+                &.delay-8 {
+                    animation-delay: 2000ms;
+                }
+
+                &.delay-9 {
+                    animation-delay: 2250ms;
+                }
+                &.delay-10 {
+                    animation-delay: 2500ms;
+                }
+                &.delay-11 {
+                    animation-delay: 2750ms;
+                }
+                &.delay-12 {
+                    animation-delay: 3000ms;
+                }
+                &.delay-13 {
+                    animation-delay: 3250ms;
+                }
+                &.delay-14 {
+                    animation-delay: 3500ms;
+                }
+
+
+                &:hover {
+                    &>.menu-text{
+                        padding-right:70px;
+                        transition:padding-right 400ms;
+                    }
+                    &>.menu-check {
+                        right:0;
+                        transition:right 400ms;
+                        i {
+                            animation: rotate-menu-check 400ms ease-in forwards;
+                        }
+
+                    }
+                }
+
+                .menu-text {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
+                    justify-content: space-between;
 
-                    .menu-detail {
-                        width: 90%;
+                    padding: 15px;
+                    width:100%;
+                    
+                    h5 {
+                        font-family: $font-text-bold;
+                        font-size: $font-size-menu-title;
+                        font-weight: 400;
+
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
                     }
 
-                    .menu-price {
-                        width: 10%;
-                        font-family: $font-text-bold;
-                        font-weight: 400;
+                    .menu-infos {
+                        font-size: $font-size-new;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .menu-detail {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .menu-price {
+                            font-family: $font-text-bold;
+                            font-weight: 400;
+                        }
                     }
                 }
+
+
+                .menu-check {
+                    background-color: $color-third;
+
+                    height: 100%;
+                    width: 60px;
+                    min-width: 0;
+                    max-width: 60px;
+                    color: white;
+
+                    position:absolute;
+                    top:0;
+                    right:-60px;
+
+                    display:grid;
+                    place-items: center;
+
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+
+                    overflow: hidden;
+
+                    transition:right 400ms;
+                }
+
             }
         }
     }
-    .btn{
-        width:50%;
-        margin:0 auto 85px auto;
+
+    .btn {
+        width: 50%;
+        margin: 0 auto 85px auto;
+    }
+}
+
+@keyframes fade-text {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-menu-check {
+    0% {
+        transform: rotate(.5turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
     }
 }

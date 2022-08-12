@@ -4,6 +4,10 @@ footer {
 
     height:200px;
 
+    @media all and (min-width:992px) {
+        height: 60px;
+    }
+
     #footer-container {
         display:flex;
         flex-direction: column;
@@ -11,6 +15,11 @@ footer {
         height: 100%;
 
         padding: 20px;
+
+        @media all and (min-width:992px) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
 
         h4 {
             font-family: $font-logo-title;
@@ -21,6 +30,10 @@ footer {
             height: 30%;
             display:flex;
             align-items: center;
+
+            @media all and (min-width:992px) {
+                height: auto;
+            }
         }
 
         #footer-links{
@@ -29,6 +42,16 @@ footer {
             flex-direction: column;
             justify-content: space-around;
 
+            @media all and (min-width:992px) {
+                flex-direction: row;
+                width:80%;
+                height: auto;
+            }
+
+            a{
+                text-decoration: none;
+                color:white;
+            }
             div i {
                 height:15px;
                 width: 15px;
