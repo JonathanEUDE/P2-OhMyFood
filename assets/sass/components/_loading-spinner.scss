@@ -1,74 +1,76 @@
+#loading-spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
+    width: 100%;
+    height: 100%;
 
-body {
-    position: relative;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-    #loading-spinner-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+    opacity: 0.9;
 
-        width: 100%;
-        height: 100%;
+    z-index: 1000;
+    animation: show-loading-spinner $randomNumber+s linear forwards;
 
-        background-color: lightgray;
+    div {
+        position: relative;
+        width: 150px;
+        height: 150px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
 
-        opacity: 0.9;
+        padding: 20px;
 
-        z-index: 1000;
-        animation: show-loading-spinner $randomNumber+s linear forwards;
+        &:after {
+            display: block;
+            position: absolute;
+            top: -6px;
+            content: '';
+            border-radius: 50%;
+            border: 6px double $color-principal;
+            border-color: $color-principal transparent $color-principal transparent;
+            animation: border-turn 1s ease-in-out infinite;
 
-        div {
-            position:relative;
-            width: 150px;
-            height: 150px;
-
-            display:flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-            padding:20px;
-
-            &:after {
-                display:block;
-                position:absolute;
-                top:-6px;
-                content: '';
-                border-radius: 50%;
-                border: 6px double $color-principal;
-                border-color:$color-principal transparent $color-principal transparent;
-                animation: border-turn 1s ease-in-out infinite;
-               
-                width: 100%;
-                height: 100%;
-            }
-
-            i {
-                color: $color-second;
-            }
+            width: 100%;
+            height: 100%;
         }
 
+        i {
+            color: $color-second;
+        }
+
+        span {
+            font-size: $font-size-subtitle;
+            font-family: $font-logo-title;
+        }
     }
+
 }
 
-@keyframes show-loading-spinner{
+
+@keyframes show-loading-spinner {
     0% {
-        opacity:0.9;
-    }
-    80%{
         opacity: 0.9;
     }
+
+    80% {
+        opacity: 0.9;
+    }
+
     100% {
-        display:none;
+        display: none;
         visibility: hidden;
-        opacity:0;
+        opacity: 0;
     }
 }
 

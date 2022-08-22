@@ -21,7 +21,11 @@
         top: 0;
         left: 0;
 
-        color: $color-principal;
+
+        background: $color-linear-gradient;
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+
         opacity: 0;
         transform-origin: center center;
 
@@ -29,14 +33,6 @@
     }
 }
 
-/* 
-    1. Add a unique CSS class name to the icon element you want to use.
-    2. Set the font-family to “Font Awesome 6 Free” (For regular,solid icons) 
-        or “Font Awesome 5 Pro” (If you buy a pro license) or “Font Awesome 5 Brands” (For brand icons)
-    3. Set the font-weight css property as 900 (For Solid), 400 (Regular or Brands), 300 (Light for pro icons).
-    4. Set the content css property to the unicode value font awesome icon.
-    5. And if required,add a common CSS class name for all icon elements, for example “font-awesome-icons” (This is to add your own CSS to the icons).
-*/
 
 
 @keyframes fill {

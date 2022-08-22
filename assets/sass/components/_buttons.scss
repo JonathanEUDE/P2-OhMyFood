@@ -2,7 +2,7 @@
 {
     color:white;
     background: $color-second;
-    background: linear-gradient(178deg, $color-second 19%, $color-principal 99%); 
+    background: $color-linear-gradient;
     height:50px;
     border-radius: 50px;
     padding:0 25px 0 25px;
@@ -17,6 +17,6 @@
 }
 
 .btn:hover{
-    background: linear-gradient(178deg, lighten($color-second,5%) 19%, lighten($color-principal,5%) 99%); 
+    background: $color-lighten-linear-gradient;
     box-shadow: 0 0 10px $color-second;
 }

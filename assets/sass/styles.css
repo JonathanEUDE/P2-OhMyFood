@@ -77,10 +77,7 @@ html {
   font-family: "Shrikhand";
   src: url("./base/fonts//Shrikhand-Regular.otf");
 }
-body {
-  position: relative;
-}
-body #loading-spinner-container {
+#loading-spinner-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -95,10 +92,10 @@ body #loading-spinner-container {
   align-items: center;
   opacity: 0.9;
   z-index: 1000;
-  -webkit-animation: show-loading-spinner 2s linear forwards;
-          animation: show-loading-spinner 2s linear forwards;
+  -webkit-animation: show-loading-spinner 3s linear forwards;
+          animation: show-loading-spinner 3s linear forwards;
 }
-body #loading-spinner-container div {
+#loading-spinner-container div {
   position: relative;
   width: 150px;
   height: 150px;
@@ -108,7 +105,7 @@ body #loading-spinner-container div {
   align-items: center;
   padding: 20px;
 }
-body #loading-spinner-container div:after {
+#loading-spinner-container div:after {
   display: block;
   position: absolute;
   top: -6px;
@@ -121,8 +118,12 @@ body #loading-spinner-container div:after {
   width: 100%;
   height: 100%;
 }
-body #loading-spinner-container div i {
+#loading-spinner-container div i {
   color: #FF79DA;
+}
+#loading-spinner-container div span {
+  font-size: 18px;
+  font-family: "Shrikhand";
 }
 
 @-webkit-keyframes show-loading-spinner {
@@ -226,21 +227,15 @@ body #loading-spinner-container div i {
   position: absolute;
   top: 0;
   left: 0;
-  color: #9356DC;
+  background: linear-gradient(178deg, #FF79DA 19%, #9356DC 99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
   transform-origin: center center;
   -webkit-animation: fill 1s linear forwards;
           animation: fill 1s linear forwards;
 }
 
-/* 
-    1. Add a unique CSS class name to the icon element you want to use.
-    2. Set the font-family to “Font Awesome 6 Free” (For regular,solid icons) 
-        or “Font Awesome 5 Pro” (If you buy a pro license) or “Font Awesome 5 Brands” (For brand icons)
-    3. Set the font-weight css property as 900 (For Solid), 400 (Regular or Brands), 300 (Light for pro icons).
-    4. Set the content css property to the unicode value font awesome icon.
-    5. And if required,add a common CSS class name for all icon elements, for example “font-awesome-icons” (This is to add your own CSS to the icons).
-*/
 @-webkit-keyframes fill {
   0% {
     opacity: 1;
@@ -257,6 +252,7 @@ body #loading-spinner-container div i {
     opacity: 1;
   }
 }
+
 @keyframes fill {
   0% {
     opacity: 1;
@@ -329,11 +325,6 @@ h3 {
   font-family: "Roboto Regular";
 }
 
-h4 {
-  font-size: 14px;
-  font-family: 18px;
-}
-
 footer {
   background-color: #353535;
   color: white;
@@ -393,10 +384,10 @@ footer #footer-container #footer-links div i {
 }
 
 @media all and (min-width: 992px) {
-  main div:nth-child(2) {
+  main #concept-fonctionnement {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-bottom: 20px;
   }
 }
@@ -410,6 +401,7 @@ main #presentation-concept {
   main #presentation-concept {
     height: auto;
     background-color: white;
+    width: 50%;
   }
 }
 main #presentation-concept #presentation-concept-content {
@@ -648,12 +640,25 @@ main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover 
   padding-left: 10px;
   width: 90%;
 }
-.menu-container .menu .menu-block h4 {
+@media all and (min-width: 992px) {
+  .menu-container .menu .menu-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+}
+@media all and (min-width: 992px) {
+  .menu-container .menu .menu-block .menu-sous-block {
+    width: 30%;
+  }
+}
+.menu-container .menu .menu-block .menu-sous-block h4 {
   text-transform: uppercase;
   position: relative;
   margin: 40px 0 10px 10px;
 }
-.menu-container .menu .menu-block h4:before {
+.menu-container .menu .menu-block .menu-sous-block h4:before {
   content: "";
   position: absolute;
   top: 0;
@@ -662,7 +667,7 @@ main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover 
   height: 20px;
   border-bottom: 3px solid #99E2D0;
 }
-.menu-container .menu .menu-block .menu-tile {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -678,82 +683,82 @@ main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover 
   overflow: hidden;
   opacity: 0;
 }
-.menu-container .menu .menu-block .menu-tile.delay-1 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-1 {
   -webkit-animation-delay: 250ms;
           animation-delay: 250ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-2 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-2 {
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-3 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-3 {
   -webkit-animation-delay: 750ms;
           animation-delay: 750ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-4 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-4 {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-5 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-5 {
   -webkit-animation-delay: 1250ms;
           animation-delay: 1250ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-6 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-6 {
   -webkit-animation-delay: 1500ms;
           animation-delay: 1500ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-7 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-7 {
   -webkit-animation-delay: 1750ms;
           animation-delay: 1750ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-8 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-8 {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-9 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-9 {
   -webkit-animation-delay: 2250ms;
           animation-delay: 2250ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-10 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-10 {
   -webkit-animation-delay: 2500ms;
           animation-delay: 2500ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-11 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-11 {
   -webkit-animation-delay: 2750ms;
           animation-delay: 2750ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-12 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-12 {
   -webkit-animation-delay: 3000ms;
           animation-delay: 3000ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-13 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-13 {
   -webkit-animation-delay: 3250ms;
           animation-delay: 3250ms;
 }
-.menu-container .menu .menu-block .menu-tile.delay-14 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile.delay-14 {
   -webkit-animation-delay: 3500ms;
           animation-delay: 3500ms;
 }
-.menu-container .menu .menu-block .menu-tile:hover > .menu-text {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-text {
   padding-right: 70px;
   transition: padding-right 400ms;
 }
-.menu-container .menu .menu-block .menu-tile:hover > .menu-check {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check {
   right: 0;
   transition: right 400ms;
 }
-.menu-container .menu .menu-block .menu-tile:hover > .menu-check i {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check i {
   -webkit-animation: rotate-menu-check 400ms ease-in forwards;
           animation: rotate-menu-check 400ms ease-in forwards;
 }
-.menu-container .menu .menu-block .menu-tile .menu-text {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
   width: 100%;
 }
-.menu-container .menu .menu-block .menu-tile .menu-text h5 {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-text h5 {
   font-family: "Roboto Bold";
   font-size: 16px;
   font-weight: 400;
@@ -761,22 +766,22 @@ main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover 
   overflow: hidden;
   white-space: nowrap;
 }
-.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-text .menu-infos {
   font-size: 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos .menu-detail {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-text .menu-infos .menu-detail {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu-container .menu .menu-block .menu-tile .menu-text .menu-infos .menu-price {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-text .menu-infos .menu-price {
   font-family: "Roboto Bold";
   font-weight: 400;
 }
-.menu-container .menu .menu-block .menu-tile .menu-check {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile .menu-check {
   background-color: #99E2D0;
   height: 100%;
   width: 60px;

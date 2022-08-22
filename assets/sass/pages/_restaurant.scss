@@ -16,7 +16,7 @@
         img {
             height: 260px;
             max-width: 100%;
-            width:100%;
+            width: 100%;
             object-fit: cover;
         }
     }
@@ -38,7 +38,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding-right:20px;
+            padding-right: 20px;
 
             h3 {
                 font-family: $font-logo-title;
@@ -54,175 +54,193 @@
 
         .menu-block {
 
-            h4 {
-                text-transform: uppercase;
-                position: relative;
-
-                margin: 40px 0 10px 10px;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-
-                    width: 40px;
-                    height: 20px;
-                    border-bottom: 3px solid $color-third;
-                }
-            }
-
-            .menu-tile {
+            @media all and (min-width:992px) {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: space-around;
+                padding-bottom: 20px;
+            }
 
-                margin-top: 14px;
-                background-color: white;
+            .menu-sous-block {
 
-                height: 70px;
-
-                border-radius: 20px;
-
-                animation: fade-text 500ms ease-in forwards;
-                animation-delay: 250ms;
-
-                position:relative;
-
-                overflow: hidden;
-
-                opacity: 0;
-
-                &.delay-1 {
-                    animation-delay: 250ms;
+                @media all and (min-width:992px) {
+                    width:30%;
                 }
 
-                &.delay-2 {
-                    animation-delay: 500ms;
-                }
+                h4 {
+                    text-transform: uppercase;
+                    position: relative;
 
-                &.delay-3 {
-                    animation-delay: 750ms;
-                }
+                    margin: 40px 0 10px 10px;
 
-                &.delay-4 {
-                    animation-delay: 1000ms;
-                }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
 
-                &.delay-5 {
-                    animation-delay: 1250ms;
-                }
-
-                &.delay-6 {
-                    animation-delay: 1500ms;
-                }
-
-                &.delay-7 {
-                    animation-delay: 1750ms;
-                }
-
-                &.delay-8 {
-                    animation-delay: 2000ms;
-                }
-
-                &.delay-9 {
-                    animation-delay: 2250ms;
-                }
-                &.delay-10 {
-                    animation-delay: 2500ms;
-                }
-                &.delay-11 {
-                    animation-delay: 2750ms;
-                }
-                &.delay-12 {
-                    animation-delay: 3000ms;
-                }
-                &.delay-13 {
-                    animation-delay: 3250ms;
-                }
-                &.delay-14 {
-                    animation-delay: 3500ms;
-                }
-
-
-                &:hover {
-                    &>.menu-text{
-                        padding-right:70px;
-                        transition:padding-right 400ms;
-                    }
-                    &>.menu-check {
-                        right:0;
-                        transition:right 400ms;
-                        i {
-                            animation: rotate-menu-check 400ms ease-in forwards;
-                        }
-
+                        width: 40px;
+                        height: 20px;
+                        border-bottom: 3px solid $color-third;
                     }
                 }
 
-                .menu-text {
+                .menu-tile {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     justify-content: space-between;
 
-                    padding: 15px;
-                    width:100%;
-                    
-                    h5 {
-                        font-family: $font-text-bold;
-                        font-size: $font-size-menu-title;
-                        font-weight: 400;
+                    margin-top: 14px;
+                    background-color: white;
 
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                    }
+                    height: 70px;
 
-                    .menu-infos {
-                        font-size: $font-size-new;
+                    border-radius: 20px;
 
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                    animation: fade-text 500ms ease-in forwards;
+                    animation-delay: 250ms;
 
-                        .menu-detail {
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                        }
-
-                        .menu-price {
-                            font-family: $font-text-bold;
-                            font-weight: 400;
-                        }
-                    }
-                }
-
-
-                .menu-check {
-                    background-color: $color-third;
-
-                    height: 100%;
-                    width: 60px;
-                    min-width: 0;
-                    max-width: 60px;
-                    color: white;
-
-                    position:absolute;
-                    top:0;
-                    right:-60px;
-
-                    display:grid;
-                    place-items: center;
-
-                    border-top-right-radius: 20px;
-                    border-bottom-right-radius: 20px;
+                    position: relative;
 
                     overflow: hidden;
 
-                    transition:right 400ms;
-                }
+                    opacity: 0;
 
+                    &.delay-1 {
+                        animation-delay: 250ms;
+                    }
+
+                    &.delay-2 {
+                        animation-delay: 500ms;
+                    }
+
+                    &.delay-3 {
+                        animation-delay: 750ms;
+                    }
+
+                    &.delay-4 {
+                        animation-delay: 1000ms;
+                    }
+
+                    &.delay-5 {
+                        animation-delay: 1250ms;
+                    }
+
+                    &.delay-6 {
+                        animation-delay: 1500ms;
+                    }
+
+                    &.delay-7 {
+                        animation-delay: 1750ms;
+                    }
+
+                    &.delay-8 {
+                        animation-delay: 2000ms;
+                    }
+
+                    &.delay-9 {
+                        animation-delay: 2250ms;
+                    }
+
+                    &.delay-10 {
+                        animation-delay: 2500ms;
+                    }
+
+                    &.delay-11 {
+                        animation-delay: 2750ms;
+                    }
+
+                    &.delay-12 {
+                        animation-delay: 3000ms;
+                    }
+
+                    &.delay-13 {
+                        animation-delay: 3250ms;
+                    }
+
+                    &.delay-14 {
+                        animation-delay: 3500ms;
+                    }
+
+
+                    &:hover {
+                        &>.menu-text {
+                            padding-right: 70px;
+                            transition: padding-right 400ms;
+                        }
+
+                        &>.menu-check {
+                            right: 0;
+                            transition: right 400ms;
+
+                            i {
+                                animation: rotate-menu-check 400ms ease-in forwards;
+                            }
+
+                        }
+                    }
+
+                    .menu-text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        padding: 15px;
+                        width: 100%;
+
+                        h5 {
+                            font-family: $font-text-bold;
+                            font-size: $font-size-menu-title;
+                            font-weight: 400;
+
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+
+                        .menu-infos {
+                            font-size: $font-size-new;
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            .menu-detail {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                            .menu-price {
+                                font-family: $font-text-bold;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    .menu-check {
+                        background-color: $color-third;
+
+                        height: 100%;
+                        width: 60px;
+                        min-width: 0;
+                        max-width: 60px;
+                        color: white;
+
+                        position: absolute;
+                        top: 0;
+                        right: -60px;
+
+                        display: grid;
+                        place-items: center;
+
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+
+                        overflow: hidden;
+
+                        transition: right 400ms;
+                    }
+                }
             }
         }
     }

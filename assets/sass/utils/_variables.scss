@@ -19,6 +19,10 @@ $color-fourth:#F6F6F6;
 $color-fifth:#F5EDFF;
 
 
+$color-linear-gradient:linear-gradient(178deg, $color-second 19%, $color-principal 99%); 
+$color-lighten-linear-gradient:linear-gradient(178deg, lighten($color-second,5%) 19%, lighten($color-principal,5%) 99%); 
+
+
 $bgcolor-footer:#353535;
 
 

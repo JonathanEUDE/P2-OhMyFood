@@ -1,9 +1,9 @@
 main{
-    div:nth-child(2){
+    #concept-fonctionnement{
         @media all and (min-width:992px) {
             display:flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             padding-bottom:20px;
         }
     }
@@ -17,6 +17,7 @@ main{
         @media all and (min-width:992px) {
             height: auto;
             background-color: white;
+            width:50%;
         }
     
         #presentation-concept-content {
