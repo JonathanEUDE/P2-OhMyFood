@@ -452,12 +452,14 @@ main #fonctionnement #fonctionnement-content {
 main #fonctionnement #fonctionnement-content h2 {
   padding-left: 20px;
   height: 100px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
 }
 @media all and (min-width: 992px) {
   main #fonctionnement #fonctionnement-content h2 {
     height: 50px;
+    display: grid;
+    place-items: center;
   }
 }
 main #fonctionnement #fonctionnement-content .steps {
