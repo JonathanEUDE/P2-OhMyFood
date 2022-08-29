@@ -206,11 +206,9 @@ main {
                     border-radius: $border-radius-default;
                     box-shadow: 0px 0px 10px lightgray;
 
-                    text-decoration: none;
-                    color: black;
-                    display: block;
-
                     margin-top: 20px;
+
+                    position:relative;
 
                     @media all and (min-width:992px) {
                         width: 45%;
@@ -218,6 +216,12 @@ main {
 
                     @media all and (min-width:1280px) {
                         width: 22%;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        display: block;
                     }
 
                     img {
@@ -232,22 +236,22 @@ main {
                     .restaurant-tile-infos {
                         width: 100%;
                         display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        justify-content: space-around;
 
-                        padding: 20px;
+                        padding: 20px 0 20px 20px;
 
-                        .restaurant-tile-infos-text {
-                            width: 90%;
-                        }
-
-                        .restaurant-tile-like {
-                            width: 10%;
-                        }
+                        
                     }
 
                     &:hover {
                         box-shadow: 0px 0px 10px $color-principal;
+                    }
+
+                    .restaurant-tile-like {
+                        position:absolute;
+                        bottom:25px;
+                        right: 20px;
                     }
                 }
             }
