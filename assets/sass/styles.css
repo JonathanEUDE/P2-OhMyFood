@@ -217,6 +217,7 @@ html {
   height: 32px;
   width: 32px;
   opacity: 1;
+  cursor: pointer;
 }
 .heart:hover::after, .heart:active::after {
   content: "\f004";
@@ -234,7 +235,6 @@ html {
   transform-origin: center center;
   -webkit-animation: fill 1s linear forwards;
           animation: fill 1s linear forwards;
-  pointer-events: none;
 }
 
 @-webkit-keyframes fill {

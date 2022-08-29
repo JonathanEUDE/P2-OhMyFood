@@ -10,6 +10,8 @@
 
     opacity: 1;
 
+    cursor: pointer;
+
     &:hover::after,&:active::after {
         content: "\f004";
         font-family: 'Font Awesome 6 Free';
@@ -29,8 +31,6 @@
         transform-origin: center center;
 
         animation: fill 1s linear forwards;
-
-        pointer-events: none;
     }
 }
 
