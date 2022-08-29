@@ -92,8 +92,8 @@ html {
   align-items: center;
   opacity: 0.9;
   z-index: 1000;
-  -webkit-animation: show-loading-spinner 3s linear forwards;
-          animation: show-loading-spinner 3s linear forwards;
+  -webkit-animation: show-loading-spinner 2s linear forwards;
+          animation: show-loading-spinner 2s linear forwards;
 }
 #loading-spinner-container div {
   position: relative;
@@ -218,7 +218,7 @@ html {
   width: 32px;
   opacity: 1;
 }
-.heart:hover::after {
+.heart:hover::after, .heart:active::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -234,6 +234,7 @@ html {
   transform-origin: center center;
   -webkit-animation: fill 1s linear forwards;
           animation: fill 1s linear forwards;
+  pointer-events: none;
 }
 
 @-webkit-keyframes fill {
@@ -741,15 +742,15 @@ main #restaurants #restaurants-content .restaurant-tiles .restaurant-tile:hover 
   -webkit-animation-delay: 3500ms;
           animation-delay: 3500ms;
 }
-.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-text {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-text, .menu-container .menu .menu-block .menu-sous-block .menu-tile:active > .menu-text {
   padding-right: 70px;
   transition: padding-right 400ms;
 }
-.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check, .menu-container .menu .menu-block .menu-sous-block .menu-tile:active > .menu-check {
   right: 0;
   transition: right 400ms;
 }
-.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check i {
+.menu-container .menu .menu-block .menu-sous-block .menu-tile:hover > .menu-check i, .menu-container .menu .menu-block .menu-sous-block .menu-tile:active > .menu-check i {
   -webkit-animation: rotate-menu-check 400ms ease-in forwards;
           animation: rotate-menu-check 400ms ease-in forwards;
 }

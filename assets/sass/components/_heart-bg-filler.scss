@@ -10,7 +10,9 @@
 
     opacity: 1;
 
-    &:hover::after {
+    
+
+    &:hover::after,&:active::after {
         content: "\f004";
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
@@ -30,6 +32,8 @@
         transform-origin: center center;
 
         animation: fill 1s linear forwards;
+
+        pointer-events: none;
     }
 }
 

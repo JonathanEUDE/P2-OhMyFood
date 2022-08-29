@@ -163,7 +163,7 @@
                     }
 
 
-                    &:hover {
+                    &:hover, &:active {
                         &>.menu-text {
                             padding-right: 70px;
                             transition: padding-right 400ms;
